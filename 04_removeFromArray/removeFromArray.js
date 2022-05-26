@@ -1,15 +1,19 @@
 const removeFromArray = function() {
-    // let storedArg = Array.from(arguments[0]);
-    let storedArray = arguments[0]; 
-    console.log(storedArray);
-    // for (let i = 0; i < storedArray; i++ )
-    //     if (i == arguments[1]){
-    //         let removed = storedArray.splice(arguments[1], 1);
-    //         return storedArg;
-    //     } 
+    let storedArray = arguments[0];
+    let valueToRemove = arguments[1];
+    let newArray = [];
+    for (let i = 0; i < storedArray.length; i++ ){
+        if (storedArray[i] != valueToRemove){
+            newArray.push(storedArray[i]);
+        }
+    }
+    return newArray;
+
 
 };
-removeFromArray([1,2,3,4], 3);
+
+//First test passed
+
 
 // Do not edit below this line
 module.exports = removeFromArray;
